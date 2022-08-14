@@ -1,0 +1,9 @@
+﻿@model Password
+
+<h2>Random passcode (passcode @Context.Session.GetInt32("count"))</h2>
+
+<h3>@Model.GeneratePass()</h3>
+
+<form action="/increment" method="POST">
+    <button></button>
+</form>
