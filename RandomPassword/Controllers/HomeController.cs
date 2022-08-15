@@ -1,13 +1,12 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Session;
 using RandomPassword.Models;
-using Microsoft.AspNetCore.Http;
 
 namespace RandomPassword.Controllers;
 
 public class HomeController : Controller
 {
-    [HttpGet("/")]
+    [HttpGet("")]
     public IActionResult Generate()
     {
         int? Count = HttpContext.Session.GetInt32("count");
